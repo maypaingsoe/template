@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+body {
+  margin: 0 auto;
+}
+.sidebar{
+  display: block;
+  position: fixed;
+  width: 15%;
+  height: 100%;
+  overflow: auto;
+  background: #6d4fdb;
+}
+.sidebar li {
+  list-style-type: none;
+  margin-left: 10px;
+  padding-top: 20px;
+}
+.sidebar a{
+  text-decoration: none;
+  color: #eee;
+}
+.sidebar a:hover{
+  color: #ff8d4a;
+}
+.home{
+  margin-left:15%;
+}
+h4,h1,p{
+  color: #45505e;
+  line-height: 2;
+  padding: 10px;
+  text-align: justify;
+}
+h3{
+  font-size: 18px;
+  text-align: center;
+  color: #45505e;
+  margin-top: 10%;
+}
+.services ul{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 50px;
+  margin-left: 15%;
+  list-style: none;
+  cursor: pointer;
+}
+.card img{
+  width: 200px;
+  height: 25vh;
+}
+.blog ul{
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 15%;
+  margin-top: 50px;
+  list-style: none;
+  cursor: pointer;
+}
+.blog-content li{
+  padding: 40px;
+  border: solid #a1c3fc;
+  border-radius: 10%; 
+}
+.blog-content li:hover{
+  transform: scale(1.1);
+}
+.contact{
+  margin-top: 50px;
+}
+.contact-icons {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+.contact-icons a{
+  margin: 30px;
+}
+.contact-icons img{
+  width: 28px;
+}
+#footer p {
+  background: #23286b;
+  color: #eee;
+	padding: 10px 0;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 12px;
+}
+span{
+  font-size: 12px;
+}
+a:link, a:visited {
+  text-decoration: none;
+  color: #eee;
+}
+a:hover {
+  color: #ff8d4a;
+}
+@media screen and (max-width: 1024px){
+  .sidebar{
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
+  .sidebar li{
+    float: left;
+    padding: 10px;
+  }
+  h4{
+    padding-top: 130px;
+  }
+  .services ul,.blog ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 400px){
+  h4{
+    padding-top: 130px;
+  } 
+  .services ul, .blog ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: -15%;
+  }
+  .blog {
+    margin: 0 15% -15%;
+  }
+  .contact {
+    margin-top: 90px;
+  }
+}
